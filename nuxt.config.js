@@ -45,7 +45,7 @@ export default {
     theme: {
       light: true,
       themes: {
-        dark: {
+        light: {
           primary: colors.blue.darken2,
           accent: colors.grey.darken3,
           secondary: colors.amber.darken3,
@@ -53,6 +53,8 @@ export default {
           warning: colors.amber.base,
           error: colors.deepOrange.accent4,
           success: colors.green.accent3,
+          kodland1: '#FFBF69',
+          kodland2: '#CBF3F0',
         },
       },
     },
