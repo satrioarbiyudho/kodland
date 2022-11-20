@@ -1,5 +1,9 @@
 # Kodland Web Development Test
 
+## Deployed Script
+
+[Kindly Visit](https://kodland.satrio.ac/)
+
 ## Build Setup
 
 ```bash
