@@ -55,10 +55,10 @@
           Выбери свой Pop-It!
         </v-row>
         <v-row no-gutters class="subtitle-1 text-center">
-          <v-col v-for="product in products" :key="product.image" cols="4">
+          <v-col v-for="product in products" :key="product.image">
             <v-container fluid class="fill-height">
               <v-card color="transparent" elevation="0">
-                <v-img :src="product?.image" max-height="200px" contain />
+                <v-img :src="product?.image" max-height="160px" contain />
                 <v-card-subtitle class="font-weight-bold title pb-2">
                   {{ product?.title }}
                 </v-card-subtitle>
@@ -72,6 +72,30 @@
                 </v-card-actions>
               </v-card>
             </v-container>
+          </v-col>
+        </v-row>
+      </v-container>
+    </v-card>
+
+    <!-- Article? Section -->
+    <v-card width="100vw" height="600px" tile img="/bg-grid.png">
+      <v-container class="justify-center fill-height pa-8" fluid>
+        <v-row no-gutters class="">
+          <v-col cols="7" align-self="center">
+            <v-row no-gutters class="headline font-weight-bold pb-8">
+              Правила игры
+            </v-row>
+            <v-row no-gutters class="subtitle-1 justify-left">
+              Игооки холат по очерели и нажимают на пупыоки Нужно обазательно
+              заканчивать ряд который начали. Нажимать можно максимум на 3
+              пупырки одновременно (обязательно полжны быть балом. нельзя
+              нажимать сразу несколько пупырок, если они не находятся впоитык)
+              Задача слелать так, чтобь сопеоник схолил послелним. кто холил
+              поспелним - тот пооигоал!
+            </v-row>
+          </v-col>
+          <v-col cols="5" align-self="center">
+            <v-img src="/photo.jpg" contain max-height="380px" />
           </v-col>
         </v-row>
       </v-container>

@@ -4,6 +4,7 @@ export default {
   ssr: false,
   head: {
     titleTemplate: '%s | Kodland Test',
+    title: 'Welcome!',
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
@@ -55,6 +56,7 @@ export default {
           success: colors.green.accent3,
           kodland1: '#FFBF69',
           kodland2: '#CBF3F0',
+          kodland3: '#333333',
         },
       },
     },
