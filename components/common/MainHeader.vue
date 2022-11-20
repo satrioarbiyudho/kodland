@@ -1,5 +1,5 @@
 <template>
-  <v-app-bar fixed color="transparent" elevation="0" class="px-4">
+  <v-app-bar fixed color="kodland1" elevation="0" class="px-4">
     <span class="font-weight-medium" @click="$router.push('/')">
       НЕ_ПУПЫРКА.РУ
     </span>
@@ -10,8 +10,9 @@
         :key="x.to"
         :to="x.to"
         class="text-none font-weight-medium"
-        >{{ x.title }}</v-tab
       >
+        {{ x.title }}
+      </v-tab>
     </v-tabs>
     <v-menu v-else offset-y class="justify-end">
       <template #activator="{ on, attrs }">

@@ -1,5 +1,6 @@
 <template>
   <v-container class="pa-0" fluid>
+    <!-- Hero Section -->
     <v-card img="/background.png" width="100vw" height="100vh" tile>
       <v-container fluid class="fill-height">
         <v-row no-gutters class="pa-12">
@@ -11,10 +12,66 @@
               Лучшая игрушка-антистресс - бесконечная пупырчатая пленка!
             </v-row>
             <v-row no-gutters class="title">
-              <v-btn color="kodland2" tile large @click="handleAlert">
+              <v-btn
+                color="kodland2"
+                tile
+                x-large
+                @click="handleAlert('КУПИТЬ!')"
+              >
                 КУПИТЬ
               </v-btn>
             </v-row>
+          </v-col>
+        </v-row>
+      </v-container>
+    </v-card>
+
+    <!-- Why Section -->
+    <v-card width="100vw" height="360px" tile>
+      <v-container class="justify-center fill-height">
+        <v-row
+          no-gutters
+          class="headline justify-center font-weight-bold pt-8 pb-4"
+        >
+          Что такое Pop it?
+        </v-row>
+        <v-row no-gutters class="subtitle-1 text-center pb-8">
+          Pon it лословно переволится как «лопни это». Это летская игоа, поопесс
+          в которой можно соавнить с лопанием возлушно-пузыочатои упаковочнои
+          пленки. по в отличии от пленки поп-иты можно давить с характерными
+          ощущениями и звуками «бесконечно»: десятки силиконовых пузырей просто
+          выдавливаются в другую сторону.
+        </v-row>
+      </v-container>
+    </v-card>
+
+    <!-- Product Section -->
+    <v-card width="100vw" height="450px" tile color="kodland2">
+      <v-container class="justify-center fill-height pa-6" fluid>
+        <v-row
+          no-gutters
+          class="headline justify-center font-weight-bold pt-8 pb-4"
+        >
+          Выбери свой Pop-It!
+        </v-row>
+        <v-row no-gutters class="subtitle-1 text-center">
+          <v-col v-for="product in products" :key="product.image" cols="4">
+            <v-container fluid class="fill-height">
+              <v-card color="transparent" elevation="0">
+                <v-img :src="product?.image" max-height="200px" contain />
+                <v-card-subtitle class="font-weight-bold title pb-2">
+                  {{ product?.title }}
+                </v-card-subtitle>
+                <v-card-actions class="justify-center pt-0">
+                  <v-btn
+                    color="kodland1"
+                    tile
+                    @click="handleAlert(product?.title)"
+                    >КУПИТЬ
+                  </v-btn>
+                </v-card-actions>
+              </v-card>
+            </v-container>
           </v-col>
         </v-row>
       </v-container>
@@ -25,12 +82,29 @@
 <script>
 export default {
   name: 'IndexPage',
+  data() {
+    return {
+      products: [
+        { title: 'Разноцветный кваратный', image: '/square.png' },
+        { title: 'Among Us, мраморный', image: '/amongus.png' },
+        { title: 'Разноцветный круглый', image: '/round.png' },
+      ],
+    }
+  },
   head: {
     title: 'Welcome!',
   },
+  computed: {
+    innerWidth() {
+      return window.innerWidth
+    },
+    innerHeight() {
+      return window.innerHeight
+    },
+  },
   methods: {
-    handleAlert() {
-      window.alert('КУПИТЬ!')
+    handleAlert(message) {
+      window.alert(message)
     },
   },
 }
