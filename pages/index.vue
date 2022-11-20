@@ -1,5 +1,5 @@
 <template>
-  <v-container class="fill-height" fluid> Kodland </v-container>
+  <v-container class="fill-height" fluid kodland1> Kodland </v-container>
 </template>
 
 <script>
